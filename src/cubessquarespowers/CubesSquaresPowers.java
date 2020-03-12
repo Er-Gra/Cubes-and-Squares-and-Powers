@@ -20,7 +20,6 @@ public class CubesSquaresPowers {
         int squared;
         int cubed;
         int exponent;
-        int total;
         
         //menu
         System.out.println("Please enter your choice\n" + 
@@ -53,14 +52,19 @@ public class CubesSquaresPowers {
             }
             if (decision == 3)
             {
+                
                 System.out.println("Enter the value of the base");
                 base = input.nextInt();
                 System.out.println("Enter the value of the exponent");
                 exponent = input.nextInt();
 
                 //number random exponent ooperation
-                total = base * base * base;
-                System.out.println(base +" raised to the exponent "+ exponent + " = " + total);
+                int total = 1;
+                for (int i=1; i<=exponent; i++){
+                        total = total  * base;
+                        System.out.println(base+"raised to the exponent"+exponent+" = "+total);
+                }
+                System.out.println("= "+total);
             }
         //while statement
             System.out.println("Please enter your choice\n" + 
